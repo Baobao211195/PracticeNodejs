@@ -2,9 +2,8 @@ var http  = require("http");
 var fs = require("fs");
 
 var server = http.createServer(function (rep, res) {
-   res.writeHead(200, {'Content-Type': 'text/html'});
+   res.writeHead(200, {'Content-Type': 'application/json'});
     var html = fs.readFileSync(__dirname + "/index.html", "utf8");
-
     res.end(html);
 });
 
