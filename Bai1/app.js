@@ -1,15 +1,18 @@
-console.log(' Call một module node js');
+console.log(' Các khái niệm về object');
 
-//
-// require('./hello.js'); // tồn tại cùng cấp vs app.js
+var person = {
+    name: 'oanh',
+    age: '26',
+    address: 'Ha nam',
 
-// call 1 function in a module
+    sayHello: (name) => console.log(`xin chao ${name}`),
 
-var sayHello = require('./hello.js');
+    printName : function () {
+        console.log('Hello, ' + this.name);
+    }
+};
 
-// sayHello();
-sayHello.sayThank();
-sayHello.sayHello();
-sayHello.sayGoodBye('van kem');
+console.log(person.address);
 
-sayHello.sayHelloParam('pham van oanh');
+person.sayHello(person.name);
+person.printName();
