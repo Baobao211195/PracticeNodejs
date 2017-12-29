@@ -1,32 +1,15 @@
-console.log(' Module và các khai niệm liên quan');
-// Module : đoạn mã có thể tái sử dụng được 
-// trong node : implement common js --> tạo ra module -> module.export and call require('path of module name')
-// First class function : hàm trong ngôn ngữ đó được dùng như 1 object (object ko phải là object trong OOP mà là 1 function)
-// Js là first class function 
-    // + đóng vai trò là tham số của hàm
-    // + đóng vai trò là giá trị trả về từ một hàm
-    // + có thể gán cho 1 biến.
+console.log(' Call một module node js');
 
-    function sayHello() {
-        console.log('hello node');
-    }
-    sayHello();
+//
+// require('./hello.js'); // tồn tại cùng cấp vs app.js
 
-    // first class function
-    function sayGoodBye(func) {
-        func();
-    }
+// call 1 function in a module
 
-    sayGoodBye(sayHello);
+var sayHello = require('./hello.js');
 
-    // function expression
-    var sayHelloVar  = function () {
-        console.log('Xin chao  node js');
-    }
+// sayHello();
+sayHello.sayThank();
+sayHello.sayHello();
+sayHello.sayGoodBye('van kem');
 
-   sayHelloVar();
-
-
-   sayGoodBye(function () {
-       console.log('goodbye node js');
-   });
+sayHello.sayHelloParam('pham van oanh');
