@@ -22,7 +22,7 @@ console.log(hoa.__proto__);
 console.log(mai.__proto__);
 console.log(hoa.__proto__ === mai.__proto__);
 
-var Dailog = require('./app2');
+var Dailog = require('./dailog');
 
 var dailog = new Dailog();
 
