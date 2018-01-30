@@ -6,9 +6,7 @@
 
 var fs = require('fs');
 
-
 var zlip = require('zlib');  // dùng để nén file
-
 
 var readable = fs.createReadStream(__dirname + '/file.txt' , {
     encoding: 'utf8',
